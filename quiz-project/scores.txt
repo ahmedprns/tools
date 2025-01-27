@@ -1,0 +1,15 @@
+ahmed,1
+ahmed2,2
+محمد,3
+شش,5
+ششش,7
+aaaaaa,2
+asdf,2
+سيبلش سي,2
+asd,1
+ fsdf ,0
+bbbbbbb,1
+cc,3
+00,1
+vfghgfh,1
+jhjk,2

@@ -1,0 +1,33 @@
+{
+  "name": "richtext",
+  "version": "1.1.1",
+  "description": "WYSIWYG editor developed as jQuery plugin",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "start": "http-server -p 8080",
+    "installuglify": "npm i uglify-js -g",
+    "uglify": "npx uglifyjs src/jquery.richtext.js > src/jquery.richtext.min.js --comments --warn",
+    "test": "cypress run -b chrome",
+    "minifycss": "npx sass --style=compressed src/richtext.scss:src/richtext.min.css",
+    "build": "npm run uglify && npm run minifycss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webfashionist/RichText.git"
+  },
+  "author": "webfashionist",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/webfashionist/RichText/issues"
+  },
+  "homepage": "https://github.com/webfashionist/RichText#readme",
+  "devDependencies": {
+    "cypress": "^13.16.1",
+    "http-server": "^14.1.1",
+    "pa11y-ci": "^3.1.0",
+    "sass": "^1.83.0",
+    "uglify-js": "^3.19.3"
+  }
+}

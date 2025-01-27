@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List with Export to Excel</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>To-Do List</h1>
+            <button class="export-btn" onclick="exportToExcel()">Export to Excel</button>
+        </div>
+        <div class="todo-input">
+            <input type="text" id="todoInput" placeholder="Add a new task...">
+            <button onclick="addTodo()">Add</button>
+        </div>
+        <ul id="todoList"></ul>
+        <p id="noTask">- No task added -</p>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

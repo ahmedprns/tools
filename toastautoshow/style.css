@@ -1,0 +1,52 @@
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: -500px; /* Initially hidden off-screen */
+  max-width: 300px;
+  background-color: white; /* خلفية بيضاء */
+  color: #333;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  transition: left 0.5s ease-in-out;
+  font-family: Arial, sans-serif;
+  direction: ltr;
+}
+
+body{
+  direction: rtl;
+}
+
+.toast-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.toast-body {
+  margin-top: 10px;
+}
+
+.toast-body a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.toast-body a:hover {
+  text-decoration: underline;
+}
+
+.close-toast {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.toast.show {
+  left: 20px; /* Visible position */
+}

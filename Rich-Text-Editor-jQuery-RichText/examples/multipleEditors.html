@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>RichText example</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="../src/richtext.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../src/jquery.richtext.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div class="page-wrapper box-content">
+
+    <label for="content">Content</label>
+    <textarea class="content" id="content" name="example">asdsad ADS DS F</textarea>
+
+    <label for="content2">Content 2</label>
+    <textarea class="content2" id="content2" name="example2"></textarea>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('.content').richText({
+            useTabForNext: true,
+            maxlength: 1000,
+            maxlengthIncludeHTML: true
+        });
+        $('.content2').richText({
+            useTabForNext: true
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Toast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="customToast" class="toast">
+    <div class="toast-header">
+      <span id="toastTitle"></span>
+      <button class="close-toast" onclick="closeToast()">×</button>
+    </div>
+    <div class="toast-body">
+      <span id="toastMessage"></span><br>
+      <a href="#" id="toastLink" target="_blank">عرض</a>
+    </div>
+  </div>
+
+  <button onclick="showToast('عنوان التوست','هذه هي الرسالة الخاصة بالتوست','https://example.com',5000,true);">إظهار التوست</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
