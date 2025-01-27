@@ -1,0 +1,72 @@
+/* إخفاء الشريط على الأجهزة الكبيرة */
+#mobile-footer {
+    display: none;
+}
+
+/* إظهار الشريط فقط على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    #mobile-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        padding: 4px 0; /* تقليل ارتفاع الشريط */
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-item {
+        flex: 1;
+        text-align: center;
+        color: #6c757d;
+        text-decoration: none;
+        font-size: 10px; /* تصغير النص */
+        transition: color 0.3s ease;
+    }
+
+    .nav-item .icon {
+        display: block;
+        font-size: 20px; /* حجم أيقونة مناسب */
+        margin-bottom: 3px; /* تقليل المسافة بين الأيقونة والنص */
+    }
+
+    .nav-item .label {
+        font-size: 10px; /* حجم النص أصغر */
+    }
+
+
+
+    /* الزر الوسطي */
+    .center-button {
+        position: relative;
+        top: -20px;
+        color: #fff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        font-size: 22px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: #b91818;
+        max-width: 50px;
+      }
+
+
+    .nav-item.active {
+        color: #b91818;
+    }
+}
+
+/* تنسيق المحتوى */
+#content {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
