@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./build/css/demo.css" rel="stylesheet">
+    <link rel="stylesheet" href="./build/css/intlTelInput.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>phone number</h1>
+    <form>
+        <input type="tel" id="phone" placeholder="+971123456789" value="+971">
+        <button type="button" id="submit-btn">Submit</button>
+    </form>
+    <script src="./build/js/intlTelInput.js"></script>
+    <script>
+        var phone=document.querySelector("#phone");
+        window.intlTelInput(phone,{});
+        document.getElementById("submit-btn").addEventListener("click", function() {
+            alert("Phone number: " + phone.value);
+        });
+    </script>
+</body>
+</html>

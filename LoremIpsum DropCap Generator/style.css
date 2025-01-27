@@ -1,0 +1,179 @@
+:root {
+	--author: "Matt Cannon";
+	--contact: "mc@mattcannon.design";
+	--description: "A dynamic drop cap and lorem ipsum text generator with extensive customization options including font choices, colors, sizes and export capabilities. Built for designers and typographers to quickly prototype and experiment with drop cap typography.";
+	--keywords: "codepenchallenge, typography, dropcap, generator, lorem-ipsum, font, design-tool";
+	--last-modified: "2024-11-14";
+	--content-language: "en";
+	--generator: "HTML5, CSS3, JavaScript, Font Awesome 6, html2pdf.js";
+	--title: "LoremIpsum DropCap Generator";
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Crimson+Text:wght@400;600&family=UnifrakturMaguntia&family=Abril+Fatface&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Crimson Text", serif;
+	line-height: 1.6;
+	color: #2d3748;
+	background: #f7fafc;
+	padding: 2rem;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 2rem auto;
+	padding: 2rem;
+	background: white;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1.5fr 1fr 1.5fr 1fr;
+	gap: 1.5rem;
+	margin-bottom: 2rem;
+	padding: 2rem;
+	background: #edf2f7;
+	border-radius: 12px;
+	align-items: start;
+}
+
+.control-group {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.spacing {
+	margin-left: -0.5rem;
+}
+
+label {
+	font-weight: 600;
+	color: #4a5568;
+	font-size: 0.85rem;
+	white-space: nowrap;
+}
+
+.slider-container {
+	position: relative;
+	padding: 10px 0;
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 6px;
+	background: #e2e8f0;
+	border-radius: 3px;
+	outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	background: #4299e1;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background 0.3s ease;
+	border: 2px solid white;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+	width: 60px;
+	height: 36px;
+	border: 2px solid #e2e8f0;
+	border-radius: 8px;
+	padding: 0;
+	cursor: pointer;
+	margin-left: 0.75rem;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+	border-radius: 6px;
+}
+
+select,
+input[type="number"] {
+	padding: 0.5rem 2rem 0.5rem 0.75rem;
+	border: 2px solid #e2e8f0;
+	border-radius: 8px;
+	font-size: 0.9rem;
+	transition: border-color 0.3s ease;
+	background: white;
+	height: 36px;
+	-webkit-appearance: none;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-position: right 0.5rem center;
+	background-size: 1em;
+}
+
+.button-group {
+	display: flex;
+	gap: 2rem;
+	margin: 1.5rem 0 1rem;
+	justify-content: center;
+}
+
+.primary-button,
+.secondary-button {
+	padding: 0.75rem 2rem;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	min-width: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.primary-button {
+	background: #2d3748;
+	color: white;
+}
+
+.secondary-button {
+	background: #edf2f7;
+	color: #4a5568;
+}
+
+.button-group i {
+	font-size: 1.1rem;
+}
+
+.text-container {
+	padding: 2rem;
+	background: transparent;
+	border-radius: 12px;
+}
+
+p {
+	margin-bottom: 1.5rem;
+	line-height: 1.8;
+	break-inside: avoid;
+	font-size: 1.1rem;
+}
+
+.value {
+	font-size: 0.85rem;
+	color: #4a5568;
+	text-align: right;
+}
